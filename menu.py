@@ -3,8 +3,10 @@ import time
 import webbrowser
 import socket
 import requests
+import whois
 from bs4 import BeautifulSoup
 import os
+import commands
 print "Option 1"
 print "Option 2"
 print "Option 3"
@@ -54,10 +56,13 @@ elif choice=="4" :
 elif choice=="5" :
 	webbrowser.open_new_tab('http://')
 elif choice=="6" :
-	webbrowser.open_new_tab('http://')
+	print commands.getoutput("sudo arp-scan -l --interface=wlo1")
+
 elif choice=="7" :
 	a=raw_input("Enter any statement    ")
-	webbrowser.open_new_tab('https://who.is/whois/%s' %a)
+	w=whois.whois(a)
+	print w.domain_name
+	print w.emails
 else :
 	print "Wrong Input"
 
