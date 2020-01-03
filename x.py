@@ -7,3 +7,4 @@ def empty_folder():
 		os.system("rm -r "+final_path)
 print("hi")
 print("hello")
+print("team1")
