@@ -6,3 +6,4 @@ def empty_folder():
 	if (confirm=="yes") or (confirm=="ya") or (confirm=="yup") or (confirm=="sure"):
 		os.system("rm -r "+final_path)
 print("hi")
+print("team2")
